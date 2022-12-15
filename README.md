@@ -1,2 +1,2 @@
-# InfoMC_HK
-Ezen a repositoryn találhatók meg a második informatika ZH feladatainak megoldása.
+# InfoMC- Hermann Katalin
+Ezen a repository-n találhatók meg a második informatika ZH feladatainak megoldásai.
