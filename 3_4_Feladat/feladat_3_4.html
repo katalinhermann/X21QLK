@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Hermann Katalin">
+        <meta name="description" content="InformatikaMC második ZH 3. és 4. feladata">
+        <title>Info ZH</title> 
+        <link rel="stylesheet"  href="style_3_4.css">
+    </head>
+    <body>
+        <h1>Harmadik feladat eredményei</h1>
+        <h2>Paralelogramma területének kiszámítása kétféleképpen</h2>
+        <p>Első képlettel <span class = "data">(alap: <span id="alap1"></span>, magasság: <span id="magassag1"></span>)</span>: <span id="paralelogramma_elso"></span></p>
+        <p>Második képlettel <span class = "data">(alap: <span id="alap2"></span>, magasság: <span id="magassag2"></span>, közbezárt szög: <span id="szog"></span>)</span>: <span id="paralelogramma_masodik"></span></p>
+         <img src="img/Paralelogramma.png" alt="Paralelogramma" >
+        <h2>Random 3 sztring kiválasztása a listából</h2>
+        <p><span id="feladat">A lista:</span> <span id="lista"></span></p>
+        <p><span id="feladat">Innen három sztring:</span> <span id="string_veletlen"></span></p>
+   
+        <script src = "script/paralelogramma.js"></script>
+        <script src = "script/visszaad.js"></script>
+        <script>
+            const alap = 10;
+            const magassag = 16;
+            const szog = 137;
+            let stringek = ["alma", "korte", "narancs", "ribizli", "malna", "eper"];
+
+            document.getElementById("alap1").innerHTML = alap;
+            document.getElementById("alap2").innerHTML = alap;
+            document.getElementById("magassag1").innerHTML = magassag;
+            document.getElementById("magassag2").innerHTML = magassag;
+            document.getElementById("szog").innerHTML = szog;
+            document.getElementById("lista").innerHTML = stringek;
+
+            document.getElementById("paralelogramma_elso").innerHTML = paralelogramma_terulete_magassag(alap, magassag);
+            document.getElementById("paralelogramma_masodik").innerHTML = paralelogramma_terulete_szog(alap, magassag, szog);
+            document.getElementById("string_veletlen").innerHTML = return_random_string(stringek);
+        </script>
+        <h1>Negyedik feladat</h1>
+        <h2>Termékeink</h2>
+        <form id="form">  
+            <label>Neve:&emsp;</label>
+            <input type="text" id="Name" name="Name" value="Unikornis">&emsp;  
+            <label>Ára:&emsp;</label> 
+            <input type="text" id="Price" name="Price" value="5000"><br>
+            <input type="submit" value="Mehet" onclick="main()"/><br> 
+        </form>
+        <div id="eddig">
+        </div>
+        <p><span class="p1">Legolcsóbb termék:</span> <span id="legolcsobb"></span></p>
+        <p><span class="p1">Árak átlaga:</span> <span id="atlag"></span></p>
+        <p><span class="p1">Árak szórása:</span> <span id="szoras"></span></p>
+        <script src = "script/termekek.js"></script>
+        <img src="img/unikornis.jpg" alt="Unikornis" >
+     </body>
+    <footer>
+    </footer>
+</html>
